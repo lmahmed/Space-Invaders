@@ -1,0 +1,31 @@
+﻿<Page
+    x:Class="Space_Invaders.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Space_Invaders"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Grid Margin="5,0,-5,0" HorizontalAlignment="Left" VerticalAlignment="Top">
+
+        <Image HorizontalAlignment= "Left" VerticalAlignment="Top" Source="/Assets/spaceinvaders.png" Margin="0,-3,0,0" Stretch="None"/>
+        <Image HorizontalAlignment="Left" VerticalAlignment="Top" Source="/Assets/title.png" Width="600" Margin="177,3,0,0"/>
+        <Button Content="Play" Margin="382,126,0,0" VerticalAlignment="Top" Height="75" Width="189" FontSize="40" Click="Button_Click" Foreground="White">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF000212" Offset="0.187"/>
+                    <GradientStop Color="#FF165970" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button Content="Credits" Margin="415,233,0,0" VerticalAlignment="Top" Width="123" Click="Button_Click_1" Foreground="White">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF000212" Offset="1"/>
+                    <GradientStop Color="#FF165970" Offset="0"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <TextBlock  Margin="62,109,634,0" TextWrapping="Wrap" Text="Invaders are attacking Earth. Protect your planet. Dodge the alien's attacks and destroy them. At all costs, do NOT let them reach Earth." VerticalAlignment="Top" Height="139" Width="264" Foreground="#FFE20909" TextAlignment="Center" FontSize="20" RenderTransformOrigin="0.763,0.567"/>
+    </Grid>
+</Page>

@@ -1,0 +1,192 @@
+﻿<Page
+    x:Class="Space_Invaders.GamePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Space_Invaders"
+    xmlns:canvas="using:Microsoft.Graphics.Canvas.UI.Xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Loaded= "Page_Loaded"
+    mc:Ignorable="d">
+
+    <Grid x:Name="Grid1" Background="#FF000212">
+
+
+        <Border BorderThickness="1" 
+                BorderBrush="#FF0022FF"
+                VerticalAlignment="Top"
+                HorizontalAlignment = "Left" Height="540" Width="552">
+            <Image HorizontalAlignment="Left" 
+                   Height="540" 
+                   VerticalAlignment="Top" 
+                   Source="/Assets/gamebackground.png" Width="550"/>
+        </Border>
+
+        <MediaElement x:Name="BackgroundMusic" HorizontalAlignment="Left" Height="53" Margin="852,478,0,0" VerticalAlignment="Top" Width="47" AudioCategory="GameMedia" Source="/Assets/spaceinvadersbackground.mp3" Visibility="Collapsed" AutoPlay="True" Volume="1" Grid.RowSpan="2" IsLooping="True"/>
+
+        <MediaElement x:Name="PlayerShoot1" HorizontalAlignment="Left" Height="53" Margin="852,478,0,0" VerticalAlignment="Top" Width="47" AudioCategory="GameEffects" Source="/Assets/playershootlight.mp3" Visibility="Collapsed" AutoPlay="False" Volume="1" Grid.RowSpan="2"/>
+        <MediaElement x:Name="PlayerShoot2" HorizontalAlignment="Left" Height="53" Margin="852,478,0,0" VerticalAlignment="Top" Width="47" AudioCategory="GameEffects" Source="/Assets/playershootlight.mp3" Visibility="Collapsed" AutoPlay="False" Volume="1" Grid.RowSpan="2"/>
+        <MediaElement x:Name="PlayerShoot3" HorizontalAlignment="Left" Height="53" Margin="852,478,0,0" VerticalAlignment="Top" Width="47" AudioCategory="GameEffects" Source="/Assets/playershootlight.mp3" Visibility="Collapsed" AutoPlay="False" Volume="1" Grid.RowSpan="2"/>
+        <MediaElement x:Name="PlayerShoot4" HorizontalAlignment="Left" Height="53" Margin="852,478,0,0" VerticalAlignment="Top" Width="47" AudioCategory="GameEffects" Source="/Assets/playershootlight.mp3" Visibility="Collapsed" AutoPlay="False" Volume="1" Grid.RowSpan="2"/>
+        <MediaElement x:Name="PlayerShoot5" HorizontalAlignment="Left" Height="53" Margin="852,478,0,0" VerticalAlignment="Top" Width="47" AudioCategory="GameEffects" Source="/Assets/playershootlight.mp3" Visibility="Collapsed" AutoPlay="False" Volume="1" Grid.RowSpan="2"/>
+        <MediaElement x:Name="PlayerShoot6" HorizontalAlignment="Left" Height="53" Margin="852,478,0,0" VerticalAlignment="Top" Width="47" AudioCategory="GameEffects" Source="/Assets/playershootlight.mp3" Visibility="Collapsed" AutoPlay="False" Volume="1" Grid.RowSpan="2"/>
+        <MediaElement x:Name="PlayerShoot7" HorizontalAlignment="Left" Height="53" Margin="852,478,0,0" VerticalAlignment="Top" Width="47" AudioCategory="GameEffects" Source="/Assets/playershootlight.mp3" Visibility="Collapsed" AutoPlay="False" Volume="1" Grid.RowSpan="2"/>
+        <MediaElement x:Name="PlayerShoot8" HorizontalAlignment="Left" Height="53" Margin="852,478,0,0" VerticalAlignment="Top" Width="47" AudioCategory="GameEffects" Source="/Assets/playershootlight.mp3" Visibility="Collapsed" AutoPlay="False" Volume="1" Grid.RowSpan="2"/>
+        <MediaElement x:Name="PlayerShoot9" HorizontalAlignment="Left" Height="53" Margin="852,478,0,0" VerticalAlignment="Top" Width="47" AudioCategory="GameEffects" Source="/Assets/playershootlight.mp3" Visibility="Collapsed" AutoPlay="False" Volume="1" Grid.RowSpan="2"/>
+        <MediaElement x:Name="PlayerShoot10" HorizontalAlignment="Left" Height="53" Margin="852,478,0,0" VerticalAlignment="Top" Width="47" AudioCategory="GameEffects" Source="/Assets/playershootlight.mp3" Visibility="Collapsed" AutoPlay="False" Volume="1" Grid.RowSpan="2"/>
+        <MediaElement x:Name="PlayerShoot11" HorizontalAlignment="Left" Height="53" Margin="852,478,0,0" VerticalAlignment="Top" Width="47" AudioCategory="GameEffects" Source="/Assets/playershootlight.mp3" Visibility="Collapsed" AutoPlay="False" Volume="1" Grid.RowSpan="2"/>
+        <MediaElement x:Name="PlayerShoot12" HorizontalAlignment="Left" Height="53" Margin="852,478,0,0" VerticalAlignment="Top" Width="47" AudioCategory="GameEffects" Source="/Assets/playershootlight.mp3" Visibility="Collapsed" AutoPlay="False" Volume="1" Grid.RowSpan="2"/>
+        <MediaElement x:Name="PlayerShoot13" HorizontalAlignment="Left" Height="53" Margin="852,478,0,0" VerticalAlignment="Top" Width="47" AudioCategory="GameEffects" Source="/Assets/playershootlight.mp3" Visibility="Collapsed" AutoPlay="False" Volume="1" Grid.RowSpan="2"/>
+        <MediaElement x:Name="PlayerShoot14" HorizontalAlignment="Left" Height="53" Margin="852,478,0,0" VerticalAlignment="Top" Width="47" AudioCategory="GameEffects" Source="/Assets/playershootlight.mp3" Visibility="Collapsed" AutoPlay="False" Volume="1" Grid.RowSpan="2"/>
+        <MediaElement x:Name="PlayerShoot15" HorizontalAlignment="Left" Height="53" Margin="852,478,0,0" VerticalAlignment="Top" Width="47" AudioCategory="GameEffects" Source="/Assets/playershootlight.mp3" Visibility="Collapsed" AutoPlay="False" Volume="1" Grid.RowSpan="2"/>
+        <MediaElement x:Name="PlayerShoot16" HorizontalAlignment="Left" Height="53" Margin="852,478,0,0" VerticalAlignment="Top" Width="47" AudioCategory="GameEffects" Source="/Assets/playershootlight.mp3" Visibility="Collapsed" AutoPlay="False" Volume="1" Grid.RowSpan="2"/>
+        <MediaElement x:Name="PlayerShoot17" HorizontalAlignment="Left" Height="53" Margin="852,478,0,0" VerticalAlignment="Top" Width="47" AudioCategory="GameEffects" Source="/Assets/playershootlight.mp3" Visibility="Collapsed" AutoPlay="False" Volume="1" Grid.RowSpan="2"/>
+        <MediaElement x:Name="PlayerShoot18" HorizontalAlignment="Left" Height="53" Margin="852,478,0,0" VerticalAlignment="Top" Width="47" AudioCategory="GameEffects" Source="/Assets/playershootlight.mp3" Visibility="Collapsed" AutoPlay="False" Volume="1" Grid.RowSpan="2"/>
+        <MediaElement x:Name="PlayerShoot19" HorizontalAlignment="Left" Height="53" Margin="852,478,0,0" VerticalAlignment="Top" Width="47" AudioCategory="GameEffects" Source="/Assets/playershootlight.mp3" Visibility="Collapsed" AutoPlay="False" Volume="1" Grid.RowSpan="2"/>
+        <MediaElement x:Name="PlayerShoot20" HorizontalAlignment="Left" Height="53" Margin="852,478,0,0" VerticalAlignment="Top" Width="47" AudioCategory="GameEffects" Source="/Assets/playershootlight.mp3" Visibility="Collapsed" AutoPlay="False" Volume="1" Grid.RowSpan="2"/>
+        <MediaElement x:Name="PlayerHitMedia" HorizontalAlignment="Left" Height="53" Margin="852,478,0,0" VerticalAlignment="Top" Width="47" AudioCategory="GameEffects" Source="/Assets/playerdeathminecraftoof.mp3" Visibility="Collapsed" AutoPlay="False" Volume="1" Grid.RowSpan="2"/>
+        <MediaElement x:Name="GameOverMedia" HorizontalAlignment="Left" Height="53" Margin="852,478,0,0" VerticalAlignment="Top" Width="47" AudioCategory="GameEffects" Source="/Assets/gameoversound.mp3" Visibility="Collapsed" AutoPlay="False" Volume="1" Grid.RowSpan="2"/>
+
+        <MediaElement x:Name="InvaderDestroyed1" HorizontalAlignment="Left" Height="53" Margin="852,478,0,0" VerticalAlignment="Top" Width="47" AudioCategory="GameEffects" Source="/Assets/invaderdestroynuke.wav" Visibility="Collapsed" AutoPlay="False" Volume=".3" Grid.RowSpan="2"/>
+        <MediaElement x:Name="InvaderDestroyed2" HorizontalAlignment="Left" Height="53" Margin="852,478,0,0" VerticalAlignment="Top" Width="47" AudioCategory="GameEffects" Source="/Assets/invaderdestroynuke.wav" Visibility="Collapsed" AutoPlay="False" Volume=".3" Grid.RowSpan="2"/>
+        <MediaElement x:Name="InvaderDestroyed3" HorizontalAlignment="Left" Height="53" Margin="852,478,0,0" VerticalAlignment="Top" Width="47" AudioCategory="GameEffects" Source="/Assets/invaderdestroynuke.wav" Visibility="Collapsed" AutoPlay="False" Volume=".3" Grid.RowSpan="2"/>
+        <MediaElement x:Name="InvaderDestroyed4" HorizontalAlignment="Left" Height="53" Margin="852,478,0,0" VerticalAlignment="Top" Width="47" AudioCategory="GameEffects" Source="/Assets/invaderdestroynuke.wav" Visibility="Collapsed" AutoPlay="False" Volume=".3" Grid.RowSpan="2"/>
+        <MediaElement x:Name="InvaderDestroyed5" HorizontalAlignment="Left" Height="53" Margin="852,478,0,0" VerticalAlignment="Top" Width="47" AudioCategory="GameEffects" Source="/Assets/invaderdestroynuke.wav" Visibility="Collapsed" AutoPlay="False" Volume=".3" Grid.RowSpan="2"/>
+        <MediaElement x:Name="InvaderDestroyed6" HorizontalAlignment="Left" Height="53" Margin="852,478,0,0" VerticalAlignment="Top" Width="47" AudioCategory="GameEffects" Source="/Assets/invaderdestroynuke.wav" Visibility="Collapsed" AutoPlay="False" Volume=".3" Grid.RowSpan="2"/>
+        <MediaElement x:Name="InvaderDestroyed7" HorizontalAlignment="Left" Height="53" Margin="852,478,0,0" VerticalAlignment="Top" Width="47" AudioCategory="GameEffects" Source="/Assets/invaderdestroynuke.wav" Visibility="Collapsed" AutoPlay="False" Volume=".3" Grid.RowSpan="2"/>
+        <MediaElement x:Name="InvaderDestroyed8" HorizontalAlignment="Left" Height="53" Margin="852,478,0,0" VerticalAlignment="Top" Width="47" AudioCategory="GameEffects" Source="/Assets/invaderdestroynuke.wav" Visibility="Collapsed" AutoPlay="False" Volume=".3" Grid.RowSpan="2"/>
+        <MediaElement x:Name="InvaderDestroyed9" HorizontalAlignment="Left" Height="53" Margin="852,478,0,0" VerticalAlignment="Top" Width="47" AudioCategory="GameEffects" Source="/Assets/invaderdestroynuke.wav" Visibility="Collapsed" AutoPlay="False" Volume=".3" Grid.RowSpan="2"/>
+        <MediaElement x:Name="InvaderDestroyed10" HorizontalAlignment="Left" Height="53" Margin="852,478,0,0" VerticalAlignment="Top" Width="47" AudioCategory="GameEffects" Source="/Assets/invaderdestroynuke.wav" Visibility="Collapsed" AutoPlay="False" Volume="0.3" Grid.RowSpan="2"/>
+
+        <MediaElement x:Name="UfoSpawnMedia" HorizontalAlignment="Left" Height="53" Margin="852,478,0,0" VerticalAlignment="Top" Width="47" AudioCategory="GameEffects" Source="/Assets/ufoappearing.wav" Visibility="Collapsed" AutoPlay="False" Volume="0.3" Grid.RowSpan="2"/>
+        <MediaElement x:Name="UfoHitMedia" HorizontalAlignment="Left" Height="53" Margin="852,478,0,0" VerticalAlignment="Top" Width="47" AudioCategory="GameEffects" Source="/Assets/ufodestroysound.wav" Visibility="Collapsed" AutoPlay="False" Volume="1" Grid.RowSpan="2"/>
+
+        <Image HorizontalAlignment="Left" VerticalAlignment="Top" Source="/Assets/title.png" RenderTransformOrigin="0.5,0.5" Margin="561,9,0,0" Width="401" Height="41"/>
+        <Image x:Name="PlayerHealth1" HorizontalAlignment="Left" Height="41" Margin="554,494,0,0" VerticalAlignment="Top" Width="41" Source="/Assets/Aspect Ratio and Trimmed Sprites/playerhealthheart_35x35.png"/>
+        <Image x:Name="PlayerHealth2" HorizontalAlignment="Left" Height="41" Margin="592,494,0,0" VerticalAlignment="Top" Width="41" Source="/Assets/Aspect Ratio and Trimmed Sprites/playerhealthheart_35x35.png"/>
+        <Image x:Name="PlayerHealth3" HorizontalAlignment="Left" Height="41" Margin="630,494,0,0" VerticalAlignment="Top" Width="41" Source="/Assets/Aspect Ratio and Trimmed Sprites/playerhealthheart_35x35.png"/>
+        <Image x:Name="PlayerHealth4" HorizontalAlignment="Left" Height="41" Margin="667,494,0,0" VerticalAlignment="Top" Width="42" Source="/Assets/Aspect Ratio and Trimmed Sprites/playerhealthheart_35x35.png"/>
+        <Image x:Name="PlayerHealth5" HorizontalAlignment="Left" Height="41" Margin="704,494,0,0" VerticalAlignment="Top" Width="42" Source="/Assets/Aspect Ratio and Trimmed Sprites/playerhealthheart_35x35.png"/>
+        <Image x:Name="PlayerHealth6" HorizontalAlignment="Left" Height="41" Margin="743,494,0,0" VerticalAlignment="Top" Width="42" Source="/Assets/Aspect Ratio and Trimmed Sprites/playerhealthheart_35x35.png"/>
+
+        <canvas:CanvasAnimatedControl x:Name="canvas" Draw="Canvas_Draw" Update="Canvas_Update" CreateResources="Canvas_CreateResources" Width="550" HorizontalAlignment="Left" Margin="0,0,0,0"  />
+        <Image HorizontalAlignment="Left" Height="31" Margin="609,59,0,0" VerticalAlignment="Top" Width="285" Source="/Assets/totalscoretext.png"/>
+        <Image x:Name="Score1" HorizontalAlignment="Left" Height="51" Margin="603,86,0,0" VerticalAlignment="Top" Width="37" Source="/Assets/Aspect Ratio and Trimmed Sprites/0Number.png"/>
+        <Image x:Name="Score2" HorizontalAlignment="Left" Height="51" Margin="655,86,0,0" VerticalAlignment="Top" Width="37" RenderTransformOrigin="0.5,0.5" Source="/Assets/Aspect Ratio and Trimmed Sprites/0Number.png"/>
+        <Image x:Name="Score3" HorizontalAlignment="Left" Height="51" Margin="706,86,0,0" VerticalAlignment="Top" Width="38" Source="/Assets/Aspect Ratio and Trimmed Sprites/0Number.png" RenderTransformOrigin="0.5,0.5"/>
+        <Image x:Name="Score4" HorizontalAlignment="Left" Height="51" Margin="758,86,0,0" VerticalAlignment="Top" Width="39" Source="/Assets/Aspect Ratio and Trimmed Sprites/0Number.png"/>
+        <Image x:Name="Score5" HorizontalAlignment="Left" Height="51" Margin="810,86,0,0" VerticalAlignment="Top" Width="37" Source="/Assets/Aspect Ratio and Trimmed Sprites/0Number.png"/>
+        <Image x:Name="Score6" HorizontalAlignment="Left" Height="51" Margin="861,86,0,0" VerticalAlignment="Top" Width="37" Source="/Assets/Aspect Ratio and Trimmed Sprites/0Number.png"/>
+        <Image HorizontalAlignment="Left" Height="20" Margin="559,467,0,0" VerticalAlignment="Top" Width="101" Source="/Assets/Aspect Ratio and Trimmed Sprites/progressbarwhite.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <CompositeTransform TranslateY="-0.7"/>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="BulletLoad1" HorizontalAlignment="Left" Height="10" Margin="564,471,0,0" VerticalAlignment="Top" Width="9" Source="/Assets/Aspect Ratio and Trimmed Sprites/greensquareloading.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <CompositeTransform TranslateX="-0.2"/>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="BulletLoad2" HorizontalAlignment="Left" Height="10" Margin="573,471,0,0" VerticalAlignment="Top" Width="9" Source="/Assets/Aspect Ratio and Trimmed Sprites/greensquareloading.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <CompositeTransform TranslateX="0.2"/>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="BulletLoad3" HorizontalAlignment="Left" Height="10" Margin="582,471,0,0" VerticalAlignment="Top" Width="9" Source="/Assets/Aspect Ratio and Trimmed Sprites/greensquareloading.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <CompositeTransform TranslateX="-0.3"/>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="BulletLoad4" HorizontalAlignment="Left" Height="10" Margin="591,471,0,0" VerticalAlignment="Top" Width="9" Source="/Assets/Aspect Ratio and Trimmed Sprites/greensquareloading.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <CompositeTransform TranslateX="0"/>
+            </Image.RenderTransform>
+
+        </Image>
+        <Image x:Name="BulletLoad5" HorizontalAlignment="Left" Height="10" Margin="600,471,0,0" VerticalAlignment="Top" Width="9" Source="/Assets/Aspect Ratio and Trimmed Sprites/greensquareloading.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <CompositeTransform TranslateX="0.4"/>
+            </Image.RenderTransform>
+
+        </Image>
+        <Image x:Name="BulletLoad6" HorizontalAlignment="Left" Height="10" Margin="610,471,0,0" VerticalAlignment="Top" Width="9" Source="/Assets/Aspect Ratio and Trimmed Sprites/greensquareloading.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <CompositeTransform TranslateX="-0.8"/>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="BulletLoad7" HorizontalAlignment="Left" Height="10" Margin="618,471,0,0" VerticalAlignment="Top" Width="9" Source="/Assets/Aspect Ratio and Trimmed Sprites/greensquareloading.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <CompositeTransform TranslateX="0.4"/>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="BulletLoad8" HorizontalAlignment="Left" Height="10" Margin="628,471,0,0" VerticalAlignment="Top" Width="9" Source="/Assets/Aspect Ratio and Trimmed Sprites/greensquareloading.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <CompositeTransform TranslateX="0"/>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="BulletLoad9" HorizontalAlignment="Left" Height="10" Margin="637,471,0,0" VerticalAlignment="Top" Width="9" Source="/Assets/Aspect Ratio and Trimmed Sprites/greensquareloading.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <CompositeTransform TranslateX="0.4"/>
+            </Image.RenderTransform>
+
+        </Image>
+        <Image x:Name="BulletLoad10" HorizontalAlignment="Left" Height="10" Margin="646,471,0,0" VerticalAlignment="Top" Width="9" Source="/Assets/Aspect Ratio and Trimmed Sprites/greensquareloading.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <CompositeTransform TranslateX="0"/>
+            </Image.RenderTransform>
+
+        </Image>
+        <Button x:Name="Play_Again" Content="Play Again" Margin="562,142,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.849,0.76" Height="35" Width="98" Click="Play_Again_Click" Foreground="White">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF000212"/>
+                    <GradientStop Color="#FF322164" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="Home_Page" Content="Home Page" Margin="680,142,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.849,0.76" Height="35" Width="98" Click="Home_Page_Click" Foreground="White">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF000212"/>
+                    <GradientStop Color="#FF322164" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Image HorizontalAlignment="Left" Height="54" Margin="559,283,0,0" VerticalAlignment="Top" Width="54" Source="/Assets/leftkey.png" RenderTransformOrigin="0.256,0.131"/>
+        <Image HorizontalAlignment="Left" Height="54" Margin="671,283,0,0" VerticalAlignment="Top" Width="54" Source="/Assets/rightkey.png" RenderTransformOrigin="0.256,0.131"/>
+        <Image HorizontalAlignment="Left" Height="44" Margin="559,395,0,0" VerticalAlignment="Top" Width="176" Source="/Assets/spacebar.png" RenderTransformOrigin="0.256,0.131" Stretch="UniformToFill"/>
+        <TextBlock HorizontalAlignment="Left" Margin="559,337,0,0" TextWrapping="Wrap" Text="Left Key: Move left" VerticalAlignment="Top" Height="35" Width="172" FontSize="20" Foreground="White"/>
+        <TextBlock HorizontalAlignment="Left" Margin="559,363,0,0" TextWrapping="Wrap" Text="Right Key: Move right" VerticalAlignment="Top" Height="35" Width="190" FontSize="20" Foreground="White"/>
+        <TextBlock HorizontalAlignment="Left" Margin="559,435,0,0" TextWrapping="Wrap" Text="Spacebar: Shoot" VerticalAlignment="Top" Height="35" Width="190" FontSize="20" Foreground="White"/>
+        <TextBlock HorizontalAlignment="Left" Margin="561,251,0,0" TextWrapping="Wrap" Text="Keyboard Settings" VerticalAlignment="Top" Height="35" Width="172" FontSize="20" Foreground="#FFF84949"/>
+        <TextBlock HorizontalAlignment="Left" Margin="780,251,0,0" TextWrapping="Wrap" Text="Controller Settings" VerticalAlignment="Top" Height="36" Width="172" FontSize="20" Foreground="#FFF84949"/>
+        <TextBlock HorizontalAlignment="Left" Margin="781,288,0,0" TextWrapping="Wrap" Text="Left joystick: Move right or left" VerticalAlignment="Top" Height="55" Width="172" FontSize="20" TextAlignment="Center" Foreground="White"/>
+        <TextBlock HorizontalAlignment="Left" Margin="777,346,0,0" TextWrapping="Wrap" Text="A or R1: Shoot" VerticalAlignment="Top" Height="55" Width="172" FontSize="20" TextAlignment="Center" Foreground="White"/>
+
+        <TextBox x:Name="NameTextBox" HorizontalAlignment="Left" Margin="796,146,0,0" Text="" VerticalAlignment="Top" RenderTransformOrigin="0.348,-0.162" Width="92" PlaceholderText="Name" TextWrapping="Wrap"/>
+        <Button x:Name="AddButton" Content="Add" Margin="895,142,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.849,0.76" Height="35" Width="50" Click="AddButton_Click" Foreground="White">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF000212"/>
+                    <GradientStop Color="#FF322164" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <TextBlock HorizontalAlignment="Left" Margin="556,175,0,0" TextWrapping="Wrap" Text="1." VerticalAlignment="Top" Height="35" Width="14" FontSize="20" Foreground="White"/>
+        <TextBlock x:Name="HighScore1" HorizontalAlignment="Left" Margin="570,175,0,0" TextWrapping="Wrap" Text="..." VerticalAlignment="Top" Height="35" Width="156" FontSize="20" Foreground="#FFF84949"/>
+        <TextBlock HorizontalAlignment="Left" Margin="777,174,0,0" TextWrapping="Wrap" Text="2." VerticalAlignment="Top" Height="35" Width="17" FontSize="20" Foreground="White"/>
+        <TextBlock x:Name="HighScore2" HorizontalAlignment="Left" Margin="794,174,0,0" TextWrapping="Wrap" Text="..." VerticalAlignment="Top" Height="35" Width="156" FontSize="20" Foreground="#FFF84949"/>
+        <TextBlock HorizontalAlignment="Left" Margin="554,197,0,0" TextWrapping="Wrap" Text="3." VerticalAlignment="Top" Height="28" Width="18" FontSize="20" Foreground="White"/>
+        <TextBlock x:Name="HighScore3" HorizontalAlignment="Left" Margin="570,197,0,0" TextWrapping="Wrap" Text="..." VerticalAlignment="Top" Height="35" Width="156" FontSize="20" Foreground="#FFF84949"/>
+        <TextBlock HorizontalAlignment="Left" Margin="777,197,0,0" TextWrapping="Wrap" Text="4." VerticalAlignment="Top" Height="35" Width="17" FontSize="20" Foreground="White"/>
+        <TextBlock x:Name="HighScore4" HorizontalAlignment="Left" Margin="794,197,0,0" TextWrapping="Wrap" Text="..." VerticalAlignment="Top" Height="35" Width="156" FontSize="20" Foreground="#FFF84949"/>
+        <TextBlock HorizontalAlignment="Left" Margin="554,219,0,0" TextWrapping="Wrap" Text="5." VerticalAlignment="Top" Height="29" Width="17" FontSize="20" Foreground="White"/>
+        <TextBlock x:Name="HighScore5" HorizontalAlignment="Left" Margin="572,219,0,0" TextWrapping="Wrap" Text="..." VerticalAlignment="Top" Height="35" Width="156" FontSize="20" Foreground="#FFF84949"/>
+        <TextBlock HorizontalAlignment="Left" Margin="777,219,0,0" TextWrapping="Wrap" Text="6." VerticalAlignment="Top" Height="35" Width="17" FontSize="20" Foreground="White"/>
+        <TextBlock x:Name="HighScore6" HorizontalAlignment="Left" Margin="794,219,0,0" TextWrapping="Wrap" Text="..." VerticalAlignment="Top" Height="35" Width="156" FontSize="20" Foreground="#FFF84949"/>
+
+
+
+    </Grid>
+
+</Page>

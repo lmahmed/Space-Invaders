@@ -1,0 +1,31 @@
+﻿<Page
+    x:Class="Space_Invaders.CreditsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Space_Invaders"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Image HorizontalAlignment="Left" Height="539" VerticalAlignment="Top" Width="962" Margin="0,-3,0,0" Source="/Assets/spaceinvaderscreditpage.png"/>
+        <Button Content="Home Page" Margin="383,405,0,0" VerticalAlignment="Top" Width="203" Click="Button_Click_1" Height="61" FontSize="30" Foreground="White">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF000212" Offset="1"/>
+                    <GradientStop Color="#FF165970" Offset="0"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Image HorizontalAlignment="Left" VerticalAlignment="Top" Source="/Assets/title.png" Width="600" Margin="177,3,0,0"/>
+        <MediaElement x:Name="BackgroundMusic" HorizontalAlignment="Left" Height="53" Margin="852,478,0,0" VerticalAlignment="Top" Width="47" AudioCategory="GameMedia" Source="/Assets/creditspagemusic.mp3" Visibility="Collapsed" AutoPlay="True" Volume="1" Grid.RowSpan="2" IsLooping="True"/>
+
+        <TextBlock HorizontalAlignment="Left" Margin="414,175,0,0" Text="Created By:" VerticalAlignment="Top" FontSize="25" Foreground="White"/>
+        <TextBlock HorizontalAlignment="Left" Margin="414,215,0,0" Text="Shahbaj Mukul" VerticalAlignment="Top" FontSize="25" Foreground="White"/>
+        <TextBlock HorizontalAlignment="Left" Margin="413,249,0,0" Text="Hussein Al-Jubury" VerticalAlignment="Top" FontSize="25" Foreground="White"/>
+        <TextBlock HorizontalAlignment="Left" Margin="410,283,0,0" Text="Nima Dorje" VerticalAlignment="Top" FontSize="25" Foreground="White"/>
+        <TextBlock HorizontalAlignment="Left" Margin="410,317,0,0" Text="Latif Ahmed" VerticalAlignment="Top" FontSize="25" Foreground="White"/>
+
+    </Grid>
+</Page>
