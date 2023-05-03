@@ -79,7 +79,6 @@ namespace Space_Invaders
 
             // File stuff
             FinalScoreList = new List<FinalScore>();
-            File.Open("Scores.txt", FileMode.Open, FileAccess.Read);
             StorageFolder localFolder = ApplicationData.Current.LocalFolder;
             ScoreFile = localFolder.CreateFileAsync("Scores.txt", CreationCollisionOption.OpenIfExists).GetAwaiter().GetResult();
 
